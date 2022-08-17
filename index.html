@@ -1,0 +1,556 @@
+<html lang="en" dir="rtl" class="" id="html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aljode</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #menu-btn.open {
+        margin: 0;
+        transform: rotate(90deg) !important;
+        transform: translateY(0);
+      }
+      #menu-btn.open .burger-top {
+        transform: rotate(45deg) translateY(6px) translate(6px);
+        background-color: red;
+      }
+      #menu-btn.open .burger-middle {
+        display: none;
+      }
+      #menu-btn.open .burger-bottom {
+        transform: rotate(-45deg) translateY(6px) translate(-6px);
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body class="font-['Cairo'] bg-white dark:bg-slate-800">
+    <!-- Navbar -->
+    <nav class="relative container mx-auto px-6 md:px-4 lg:px-6 py-4" dir="ltr">
+      <!-- Flex container -->
+      <div class="flex items-center justify-between">
+        <!-- logo -->
+        <div class="font-bold text-2xl text-blue-600 dark:text-blue-400">
+          <a href=""> الجـودي <i class="fa-solid fa-infinity"></i> </a>
+        </div>
+        <!-- Menu Item -->
+        <div class="hidden md:flex space-x-6" dir="rtl">
+          <a href="" class="ml-6 text-blue-600 dark:text-blue-300">الرئيسية</a>
+          <a
+            href=""
+            class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+            >الخدمات</a
+          >
+          <a
+            href=""
+            class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+            >كيف يعمل</a
+          >
+          <a
+            href=""
+            class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+            >تحميل التطبيق</a
+          >
+          <a
+            href=""
+            class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+            style="margin-left: 0"
+            >اتصل بنا</a
+          >
+        </div>
+        <!-- Buttom -->
+        <!-- Dark / light Mode -->
+        <div class="flex justify-between md:gap-2 lg:gap-6">
+          <button
+            class="relative inline-flex items-center py-1.5 px-2 rounded-full transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white focus:outline-none bg-blue-500 text-blue-200 focus-visible:ring-blue-500 dark:bg-slate-700 dark:text-slate-400 dark:focus-visible:ring-slate-500"
+            id="switcher"
+            role="switch"
+            type="button"
+            tabindex="0"
+          >
+            <svg
+              fill="none"
+              aria-hidden="true"
+              class="w-6 h-6 md:w-5 md:h-5 lg:w-6 lg:h-6 transform transition-transform scale-0 dark:scale-100 duration-500 dark:duration-500"
+            >
+              <path
+                d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M12 4v1M18 6l-1 1M20 12h-1M18 18l-1-1M12 19v1M7 17l-1 1M5 12H4M7 7 6 6"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <svg
+              fill="none"
+              aria-hidden="true"
+              class="w-6 h-6 md:w-5 md:h-5 lg:w-6 lg:h-6 ml-3.5 transform transition-transform scale-100 duration-300 dark:scale-0 dark:duration-500"
+            >
+              <path
+                d="M18 15.63c-.977.52-1.945.481-3.13.481A6.981 6.981 0 0 1 7.89 9.13c0-1.185-.04-2.153.481-3.13C6.166 7.174 5 9.347 5 12.018A6.981 6.981 0 0 0 11.982 19c2.67 0 4.844-1.166 6.018-3.37ZM16 5c0 2.08-.96 4-3 4 2.04 0 3 .92 3 3 0-2.08.96-3 3-3-2.04 0-3-1.92-3-4Z"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <span
+              class="absolute top-0.5 md:top-['1px'] lg:top-0.5 left-0.5 bg-white w-8 h-8 lg:w-8 lg:h-8 md:w-7 md:h-7 rounded-full flex items-center justify-center transition duration-500 transform dark:translate-x-[2.625rem]"
+            >
+              <svg
+                fill="none"
+                aria-hidden="true"
+                class="w-6 h-6 md:w-5 md:h-5 lg:w-6 lg:h-6 flex-none transition duration-500 transform text-blue-500 dark:text-cyan-500 opacity-100 dark:opacity-0 scale-100 dark:scale-0 md:-translate-x-[5px] md:-translate-y-[2px] lg:translate-x-0 lg:translate-y-0"
+              >
+                <path
+                  d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M12 4v1M18 6l-1 1M20 12h-1M18 18l-1-1M12 19v1M7 17l-1 1M5 12H4M7 7 6 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <svg
+                fill="none"
+                aria-hidden="true"
+                class="w-6 h-6 md:w-5 md:h-5 lg:w-6 lg:h-6 flex-none -ml-6 transition duration-500 transform text-slate-700 opacity-0 scale-0 dark:opacity-100 dark:scale-100"
+              >
+                <path
+                  d="M18 15.63c-.977.52-1.945.481-3.13.481A6.981 6.981 0 0 1 7.89 9.13c0-1.185-.04-2.153.481-3.13C6.166 7.174 5 9.347 5 12.018A6.981 6.981 0 0 0 11.982 19c2.67 0 4.844-1.166 6.018-3.37ZM16 5c0 2.08-.96 4-3 4 2.04 0 3 .92 3 3 0-2.08.96-3 3-3-2.04 0-3-1.92-3-4Z"
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+          </button>
+          <a
+            href=""
+            class="hidden md:block py-1 md:text-sm md:min-w-fit lg:text-base px-3 text-white bg-blue-500 dark:bg-blue-600 dark:text-slate-100 rounded-full baseline"
+            >لوحة التحكم</a
+          >
+        </div>
+
+        <!-- Burger Icon -->
+        <button
+          id="menu-btn"
+          class="block md:hidden focus:outline-none cursor-pointer w-6 h-6 transition-all duration-300 relative mt-[7px]"
+        >
+          <span
+            class="burger-top absolute top-0 left-0 w-6 h-0.5 bg-black dark:bg-white transition-all duration-500 rotate-0"
+          ></span>
+          <span
+            class="burger-middle absolute top-0 left-0 w-6 h-0.5 bg-black dark:bg-white translate-y-[7px] transition-all duration-500 rotate-0"
+          ></span>
+          <span
+            class="burger-bottom absolute top-0 left-0 w-6 h-0.5 bg-black dark:bg-white translate-y-[14px] transition-all duration-500 rotate-0"
+          ></span>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="md:hidden">
+        <div
+          id="menu"
+          class="hidden absolute flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-slate-50 dark:bg-slate-700 sm:w-auto sm:self-center left-6 right-6 drop-shadow-lg"
+        >
+          <a href="" class="text-blue-600 dark:text-blue-300">الرئيسية</a>
+          <a
+            href=""
+            class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+            >الخدمات</a
+          >
+          <a
+            href=""
+            class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+            >كيف يعمل</a
+          >
+          <a
+            href=""
+            class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+            >تحميل التطبيق</a
+          >
+          <a
+            href=""
+            class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+            >اتصل بنا</a
+          >
+          <a
+            href=""
+            class="py-1 px-3 text-white bg-blue-500 dark:bg-blue-600 dark:text-slate-100 rounded-full baseline"
+            >لوحة التحكم</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contact Me -->
+    <div
+      class="container mx-auto w-11/12 sm:w-7/12 grid lg:grid-cols-[30%_1fr] lg:gap-6 sm:grid-rows-1 gap-8 pt-12"
+      dir="ltr"
+    >
+      <div class="contact-option text-end flex flex-col gap-5">
+        <article
+          class="p-5 text-center bg-gray-100 rounded dark:bg-slate-700 border border-slate-200 dark:border-slate-600"
+        >
+          <i class="fa-solid fa-envelope text-2xl mb-2 dark:text-slate-100"></i>
+          <h4 class="dark:text-slate-100">البريد الالكتروني</h4>
+          <h5 class="dark:text-slate-100">info@aljode.com</h5>
+          <a
+            href="#"
+            target="_blank"
+            class="mt-3 inline-block text-sm text-blue-500 dark:text-blue-400"
+            >ارسال الرسالة</a
+          >
+        </article>
+        <article
+          class="p-5 text-center bg-gray-100 rounded dark:bg-slate-700 border-slate-200 dark:border-slate-600"
+        >
+          <i
+            class="fa-brands fa-facebook-messenger text-2xl mb-2 dark:text-slate-100"
+          ></i>
+          <h4 class="dark:text-slate-100">مسنجر</h4>
+          <h5 class="dark:text-slate-100">aljode</h5>
+          <a
+            href="#"
+            target="_blank"
+            class="mt-3 inline-block text-sm text-blue-500 dark:text-blue-400"
+            >ارسال الرسالة</a
+          >
+        </article>
+        <article
+          class="p-5 text-center bg-gray-100 rounded dark:bg-slate-700 border-slate-200 dark:border-slate-600"
+        >
+          <i
+            class="fa-brands fa-whatsapp text-2xl mb-2 dark:text-slate-100"
+          ></i>
+          <h4 class="dark:text-slate-100">واتساب</h4>
+          <h5 class="dark:text-slate-100">+123456789</h5>
+          <a
+            href="#"
+            target="_blank"
+            class="mt-3 inline-block text-sm text-blue-500 dark:text-blue-400"
+            >ارسال الرسالة</a
+          >
+        </article>
+      </div>
+      <form action="" class="flex flex-col gap-5" dir="rtl">
+        <label class="block">
+          <span
+            class="block text-sm font-medium text-slate-700 mb-3 dark:text-slate-100"
+            >اسمك الشخـصي</span
+          >
+          <input
+            type="text"
+            name="name"
+            required
+            placeholder="أدخل اسمك الشخصي"
+            class="mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+          />
+        </label>
+        <label class="block">
+          <span
+            class="block text-sm font-medium text-slate-700 mb-3 dark:text-slate-100"
+            >البريد الالكتروني</span
+          >
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="ادخل البريد الالكتروني"
+            class="mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:text-pink-600 dark:invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+          />
+        </label>
+
+        <label class="block">
+          <span
+            class="block text-sm font-medium text-slate-700 mb-3 dark:text-slate-100"
+            >رسالتك</span
+          >
+          <textarea
+            name="message"
+            id="msg"
+            rows="10"
+            required
+            placeholder="ادخل رسالتك"
+            class="resize-none mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+          ></textarea>
+        </label>
+
+        <button
+          type="submit"
+          class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
+          ارسال
+        </button>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center pt-12">
+      <!-- Section: Links  -->
+      <div class="container mx-auto text-center mt-5 border-b">
+        <!-- Grid row -->
+        <div class="grid grid-cols-4 mt-3 text-center">
+          <!-- Grid column -->
+          <div
+            class="col-span-4 md:col-span-2 lg:col-span-1 mx-auto mb-4 lg:text-start"
+          >
+            <!-- Content -->
+            <div class="mb-3">
+              <h2
+                class="font-bold text-4xl text-blue-500 dark:text-blue-400 mb-10"
+              >
+                <i class="fa-solid fa-infinity"></i> الجـودي
+              </h2>
+              <p
+                class="text-slate-900 dark:text-slate-100 leading-9 w-3/4 mx-auto md:w-full"
+              >
+                هذا النص هو مثال لنص يمكن أن يستبدل ببساطة نص شكلي (بمعنى أن
+                الغاية هي الشكل وليس المحتوى)
+              </p>
+            </div>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-span-4 md:col-span-2 lg:col-span-1 mx-auto mb-4">
+            <!-- Links -->
+            <h5 class="font-bold text-xl mb-6 text-blue-500 dark:text-blue-400">
+              روابط هامة
+            </h5>
+            <ul class="flex flex-col">
+              <li class="mb-4">
+                <a
+                  class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+                  href=""
+                  target="_blank"
+                  >نبذة عن الجودي</a
+                >
+              </li>
+              <li class="mb-4">
+                <a
+                  class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+                  href=""
+                  target="_blank"
+                  >سياسة الخصوصية</a
+                >
+              </li>
+              <li class="mb-3">
+                <a
+                  class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+                  href=""
+                  target="_blank"
+                  >شروط و الأحكام</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-span-4 md:col-span-2 lg:col-span-1 mx-auto mb-4">
+            <!-- Links -->
+            <h5 class="font-bold text-xl mb-6 text-blue-500 dark:text-blue-400">
+              الخدمات
+            </h5>
+            <ul class="flex flex-col">
+              <li class="mb-4">
+                <a
+                  class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+                  href=""
+                  target="_blank"
+                  >قسم ثلاثية الأبعاد</a
+                >
+              </li>
+              <li class="mb-3">
+                <a
+                  class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+                  href=""
+                  target="_blank"
+                  >قسم الأدوات الكهربائية</a
+                >
+              </li>
+              <li class="mb-3">
+                <a
+                  class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+                  href=""
+                  target="_blank"
+                  >قسم مواد البناء</a
+                >
+              </li>
+              <li class="mb-3">
+                <a
+                  class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+                  href=""
+                  target="_blank"
+                  >قسم المواد الزراعية</a
+                >
+              </li>
+              <li class="mb-4">
+                <a
+                  class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+                  href=""
+                  target="_blank"
+                  >قسم الدهان</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-span-4 md:col-span-2 lg:col-span-1 mx-auto mb-4">
+            <!-- Links -->
+            <h5 class="font-bold text-xl mb-6 text-blue-500 dark:text-blue-400">
+              تابعنا عبر
+            </h5>
+            <ul class="flex flex-col">
+              <li class="mb-4">
+                <a
+                  class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+                  href=""
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-facebook-f text-[#1877f2]"></i>
+                  <span class="mr-2">تابعنا عبر الفيسبوك</span>
+                </a>
+              </li>
+              <li class="mb-4 text-start">
+                <a
+                  class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+                  href=""
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-twitter text-[#1da1f2]"></i>
+                  <span class="mr-2">تابعنا عبر تويتر</span>
+                </a>
+              </li>
+              <li class="mb-4">
+                <a
+                  class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+                  href=""
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-instagram text-[#fd1d1d]"></i>
+                  <span class="mr-2">تابعنا عبر انستجرام</span>
+                </a>
+              </li>
+              <li class="mb-4">
+                <a
+                  class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+                  href=""
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-youtube text-[#ff0000]"></i>
+                  <span class="mr-2">تابعنا عبر اليوتيوب</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div class="text-center p-5 text-slate-900 dark:text-slate-100">
+        جميع الحقوق محفوظة لـ الجـودي، وعلاماتها التجارية. 2022 ©
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <script>
+      // Local Stroge
+      let option = window.localStorage.getItem("mode");
+      if (option !== null) {
+        // console.log(window.localStorage.getItem("mode"));
+        if (option === "dark") {
+          document.getElementById("html").classList.add("dark");
+        } else {
+          document.getElementById("html").classList.remove("dark");
+        }
+      }
+
+      switcher.addEventListener("click", () => {
+        document.getElementById("html").classList.toggle("dark");
+        if (document.getElementById("html").classList.contains("dark")) {
+          window.localStorage.setItem("mode", "dark");
+        } else {
+          window.localStorage.setItem("mode", "light");
+        }
+      });
+
+      // Open And Close Buttom
+      let btn = document.getElementById("menu-btn");
+      let nav = document.getElementById("menu");
+
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("open");
+        nav.classList.toggle("flex");
+        nav.classList.toggle("hidden");
+      });
+
+      // Customization
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          screens: {
+            sm: "640px",
+            // => @media (min-width: 640px) { ... }
+
+            md: "768px",
+            // => @media (min-width: 768px) { ... }
+
+            lg: "1024px",
+            // => @media (min-width: 1024px) { ... }
+
+            xl: "1200px",
+            // => @media (min-width: 1280px) { ... }
+
+            "2xl": "1400px",
+            // => @media (min-width: 1536px) { ... }
+          },
+        },
+        extend: {},
+      };
+    </script>
+  </body>
+</html>
