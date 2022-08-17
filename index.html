@@ -23,6 +23,7 @@
     />
 
     <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
       #menu-btn.open {
         margin: 0;
@@ -39,6 +40,10 @@
       #menu-btn.open .burger-bottom {
         transform: rotate(-45deg) translateY(6px) translate(-6px);
         background-color: red;
+      }
+
+      .swal2-confirm {
+        display: none !important;
       }
     </style>
   </head>
@@ -270,7 +275,7 @@
           >
         </article>
       </div>
-      <form action="" class="flex flex-col gap-5" dir="rtl">
+      <form action="" class="flex flex-col gap-5" dir="rtl" id="myForm">
         <label class="block">
           <span
             class="block text-sm font-medium text-slate-700 mb-3 dark:text-slate-100"
@@ -278,10 +283,9 @@
           >
           <input
             type="text"
-            name="name"
             required
             placeholder="أدخل اسمك الشخصي"
-            class="mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+            class="name mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
           />
         </label>
         <label class="block">
@@ -291,10 +295,9 @@
           >
           <input
             type="email"
-            name="email"
             required
             placeholder="ادخل البريد الالكتروني"
-            class="mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:text-pink-600 dark:invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+            class="email mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:text-pink-600 dark:invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
           />
         </label>
 
@@ -304,16 +307,15 @@
             >رسالتك</span
           >
           <textarea
-            name="message"
-            id="msg"
             rows="10"
             required
             placeholder="ادخل رسالتك"
-            class="resize-none mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+            class="message resize-none mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
           ></textarea>
         </label>
 
         <button
+          id="submit"
           type="submit"
           class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
         >
@@ -497,6 +499,17 @@
       <!-- Copyright -->
     </footer>
 
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("Rj2QulWvExeOM5G9k");
+      })();
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
       // Local Stroge
       let option = window.localStorage.getItem("mode");
@@ -551,6 +564,56 @@
         },
         extend: {},
       };
+
+      // ----------------------
+
+      function validData() {
+        let btnSubmit = document.getElementById("submit");
+        let name = document.querySelector(".name");
+        let email = document.querySelector(".email");
+        let message = document.querySelector(".message");
+
+        btnSubmit.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          if (name.value === "" || email.value === "" || message === "") {
+            inputEmpty();
+          } else {
+            sendmail(name.value, email.value, message.value);
+            success();
+
+            myForm.reset();
+          }
+        });
+      }
+      validData();
+      function sendmail(name, email, message) {
+        emailjs.send("service_16k3ovi", "template_y84xesf", {
+          name: name,
+          email: email,
+          message: message,
+        });
+      }
+      function success() {
+        let timerInterval;
+        Swal.fire({
+          title: "! Good job",
+          text: "Successfully Sent Message",
+          icon: "success",
+          timer: 1500,
+          timerProgressBar: true,
+        });
+      }
+      function inputEmpty() {
+        let timerInterval;
+        Swal.fire({
+          title: "! Oops...",
+          text: "! Inputs fileds are required",
+          icon: "error",
+          timer: 2000,
+          timerProgressBar: true,
+        });
+      }
     </script>
   </body>
 </html>
