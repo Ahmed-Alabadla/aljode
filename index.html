@@ -1,10 +1,11 @@
-<html lang="en" dir="rtl" class="" id="html">
+<html lang="en" dir="rtl" class="dark" id="html">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aljode</title>
+    <title>الجودي</title>
 
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +13,6 @@
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -25,6 +25,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      * {
+        box-sizing: border-box;
+      }
       #menu-btn.open {
         margin: 0;
         transform: rotate(90deg) !important;
@@ -45,6 +51,14 @@
       .swal2-confirm {
         display: none !important;
       }
+      .swal2-popup {
+        direction: ltr !important;
+      }
+      @media (max-width: 640px) {
+        .swal2-popup {
+          width: 90% !important;
+        }
+      }
     </style>
   </head>
   <body class="font-['Cairo'] bg-white dark:bg-slate-800">
@@ -53,29 +67,31 @@
       <!-- Flex container -->
       <div class="flex items-center justify-between">
         <!-- logo -->
-        <div class="font-bold text-2xl text-blue-600 dark:text-blue-400">
+        <div class="font-bold text-2xl text-blue-600 dark:text-blue-500">
           <a href=""> الجـودي <i class="fa-solid fa-infinity"></i> </a>
         </div>
         <!-- Menu Item -->
-        <div class="hidden md:flex space-x-6" dir="rtl">
-          <a href="" class="ml-6 text-blue-600 dark:text-blue-300">الرئيسية</a>
+        <div class="hidden md:flex md:space-x-4 lg:space-x-6" dir="rtl">
+          <a href="#home" class="ml-6 text-blue-600 dark:text-blue-300"
+            >الرئيسية</a
+          >
           <a
-            href=""
+            href="#services"
             class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
             >الخدمات</a
           >
           <a
-            href=""
+            href="#!"
             class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
             >كيف يعمل</a
           >
           <a
-            href=""
+            href="#!"
             class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
             >تحميل التطبيق</a
           >
           <a
-            href=""
+            href="#contact"
             class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
             style="margin-left: 0"
             >اتصل بنا</a
@@ -167,7 +183,7 @@
             </span>
           </button>
           <a
-            href=""
+            href="https://aljode.com/dashboard"
             class="hidden md:block py-1 md:text-sm md:min-w-fit lg:text-base px-3 text-white bg-blue-500 dark:bg-blue-600 dark:text-slate-100 rounded-full baseline"
             >لوحة التحكم</a
           >
@@ -193,137 +209,320 @@
       <div class="md:hidden">
         <div
           id="menu"
-          class="hidden absolute flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-slate-50 dark:bg-slate-700 sm:w-auto sm:self-center left-6 right-6 drop-shadow-lg"
+          class="hidden flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-slate-50 dark:bg-slate-700 sm:w-auto sm:self-center left-6 right-6 drop-shadow-lg z-10"
         >
-          <a href="" class="text-blue-600 dark:text-blue-300">الرئيسية</a>
+          <a href="#home" class="anchor text-blue-600 dark:text-blue-300"
+            >الرئيسية</a
+          >
           <a
-            href=""
-            class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+            href="#services"
+            class="anchor text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
             >الخدمات</a
           >
           <a
-            href=""
-            class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+            href="#!"
+            class="anchor text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
             >كيف يعمل</a
           >
           <a
-            href=""
-            class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+            href="#!"
+            class="anchor text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
             >تحميل التطبيق</a
           >
           <a
-            href=""
-            class="text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
+            href="#contact"
+            class="anchor text-slate-900 dark:text-slate-100 dark:hover:text-blue-300 hover:text-blue-600"
             >اتصل بنا</a
           >
           <a
-            href=""
-            class="py-1 px-3 text-white bg-blue-500 dark:bg-blue-600 dark:text-slate-100 rounded-full baseline"
+            href="https://aljode.com/dashboard"
+            class="anchor py-1 px-3 text-white bg-blue-500 dark:bg-blue-600 dark:text-slate-100 rounded-full baseline"
             >لوحة التحكم</a
           >
         </div>
       </div>
     </nav>
 
-    <!-- Contact Me -->
+    <!-- Home -->
     <div
-      class="container mx-auto w-11/12 sm:w-7/12 grid lg:grid-cols-[30%_1fr] lg:gap-6 sm:grid-rows-1 gap-8 pt-12"
-      dir="ltr"
+      class="container mx-auto pt-4 flex lg:gap-10 gap-6 flex-col lg:flex-row justify-between px-3"
+      id="home"
     >
-      <div class="contact-option text-end flex flex-col gap-5">
-        <article
-          class="p-5 text-center bg-gray-100 rounded dark:bg-slate-700 border border-slate-200 dark:border-slate-600"
+      <div class="my-4 flex flex-col justify-center">
+        <span
+          ><span class="writer font-bold text-blue-500">حمل التطبيق و </span
+          ><span class="text-2xl font-medium text-blue-500">..</span></span
         >
-          <i class="fa-solid fa-envelope text-2xl mb-2 dark:text-slate-100"></i>
-          <h4 class="dark:text-slate-100">البريد الالكتروني</h4>
-          <h5 class="dark:text-slate-100">info@aljode.com</h5>
-          <a
-            href="#"
-            target="_blank"
-            class="mt-3 inline-block text-sm text-blue-500 dark:text-blue-400"
-            >ارسال الرسالة</a
-          >
-        </article>
-        <article
-          class="p-5 text-center bg-gray-100 rounded dark:bg-slate-700 border-slate-200 dark:border-slate-600"
+        <h1
+          class="font-bold pt-3 pb-5 text-xl lg:text-2xl leading-10 dark:text-slate-100"
         >
-          <i
-            class="fa-brands fa-facebook-messenger text-2xl mb-2 dark:text-slate-100"
-          ></i>
-          <h4 class="dark:text-slate-100">مسنجر</h4>
-          <h5 class="dark:text-slate-100">aljode</h5>
-          <a
-            href="#"
-            target="_blank"
-            class="mt-3 inline-block text-sm text-blue-500 dark:text-blue-400"
-            >ارسال الرسالة</a
-          >
-        </article>
-        <article
-          class="p-5 text-center bg-gray-100 rounded dark:bg-slate-700 border-slate-200 dark:border-slate-600"
-        >
-          <i
-            class="fa-brands fa-whatsapp text-2xl mb-2 dark:text-slate-100"
-          ></i>
-          <h4 class="dark:text-slate-100">واتساب</h4>
-          <h5 class="dark:text-slate-100">+123456789</h5>
-          <a
-            href="#"
-            target="_blank"
-            class="mt-3 inline-block text-sm text-blue-500 dark:text-blue-400"
-            >ارسال الرسالة</a
-          >
-        </article>
+          جميع خدماتك التي تحتاجها توصلك لحد باب البيت بكل سرعة و أمان
+        </h1>
+        <div class="flex gap-3 justify-center md:justify-start">
+          <a href="#">
+            <img src="App Store.png" alt="" class="w-[90%]" />
+          </a>
+          <a href="#">
+            <img src="Google play.png" alt="" class="w-[90%]" />
+          </a>
+        </div>
       </div>
-      <form action="" class="flex flex-col gap-5" dir="rtl" id="myForm">
-        <label class="block">
-          <span
-            class="block text-sm font-medium text-slate-700 mb-3 dark:text-slate-100"
-            >اسمك الشخـصي</span
-          >
-          <input
-            type="text"
-            required
-            placeholder="أدخل اسمك الشخصي"
-            class="name mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
-          />
-        </label>
-        <label class="block">
-          <span
-            class="block text-sm font-medium text-slate-700 mb-3 dark:text-slate-100"
-            >البريد الالكتروني</span
-          >
-          <input
-            type="email"
-            required
-            placeholder="ادخل البريد الالكتروني"
-            class="email mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:text-pink-600 dark:invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-          />
-        </label>
-
-        <label class="block">
-          <span
-            class="block text-sm font-medium text-slate-700 mb-3 dark:text-slate-100"
-            >رسالتك</span
-          >
-          <textarea
-            rows="10"
-            required
-            placeholder="ادخل رسالتك"
-            class="message resize-none mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
-          ></textarea>
-        </label>
-
-        <button
-          id="submit"
-          type="submit"
-          class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-        >
-          ارسال
-        </button>
-      </form>
+      <div class="">
+        <!-- https://via.placeholder.com/790x400 -->
+        <img src="home1.jpg" alt="" class="" />
+      </div>
     </div>
 
+    <!-- Services -->
+    <div>
+      <h2
+        class="container mx-auto text-center text-4xl font-bold text-slate-700 pt-8 mt-8 dark:text-slate-100"
+        id="services"
+      >
+        الخدمات
+      </h2>
+      <div
+        class="services container mx-auto pt-8 grid grid-cols-12 text-center gap-6"
+      >
+        <div
+          class="col-span-12 md:col-span-6 lg:col-span-4 flex flex-col items-center relative rounded-lg mb-6"
+        >
+          <img
+            src="1.jpg"
+            alt=""
+            class="md:w-11/12 w-[68%] rounded-lg"
+            width="400"
+            height="250"
+          />
+          <h2
+            class="w-1/2 md:w-3/5 p-2.5 md:p-3 text-lg font-semibold rounded-md border border-slate-200 dark:border-slate-600 dark:text-slate-100 bg-slate-50 dark:bg-slate-700 absolute bottom-0 translate-y-[50%]"
+          >
+            خدمات السيارات
+          </h2>
+        </div>
+        <div
+          class="col-span-12 md:col-span-6 lg:col-span-4 flex flex-col items-center relative rounded-lg mb-6"
+        >
+          <img
+            src="2.jpg"
+            alt=""
+            class="md:w-11/12 w-[68%] rounded-lg"
+            width="400"
+            height="250"
+          />
+          <h2
+            class="w-1/2 md:w-3/5 p-2.5 md:p-3 text-lg font-semibold rounded-md border border-slate-200 dark:border-slate-600 dark:text-slate-100 bg-slate-50 dark:bg-slate-700 absolute bottom-0 translate-y-[50%]"
+          >
+            الخدمات الطبية
+          </h2>
+        </div>
+        <div
+          class="col-span-12 md:col-span-6 lg:col-span-4 flex flex-col items-center relative rounded-lg mb-6"
+        >
+          <!-- https://via.placeholder.com/400x250 -->
+          <img
+            src="3.jpg"
+            alt=""
+            class="md:w-11/12 w-[68%] rounded-lg"
+            width="400"
+            height="250"
+          />
+          <h2
+            class="w-1/2 md:w-3/5 p-2.5 md:p-3 text-lg font-semibold rounded-md border border-slate-200 dark:border-slate-600 dark:text-slate-100 bg-slate-50 dark:bg-slate-700 absolute bottom-0 translate-y-[50%]"
+          >
+            قصات الشعر والجمال
+          </h2>
+        </div>
+        <div
+          class="col-span-12 md:col-span-6 lg:col-span-4 flex flex-col items-center relative rounded-lg mb-6"
+        >
+          <img
+            src="1.jpg"
+            alt=""
+            class="md:w-11/12 w-[68%] rounded-lg"
+            width="400"
+            height="250"
+          />
+          <h2
+            class="w-1/2 md:w-3/5 p-2.5 md:p-3 text-lg font-semibold rounded-md border border-slate-200 dark:border-slate-600 dark:text-slate-100 bg-slate-50 dark:bg-slate-700 absolute bottom-0 translate-y-[50%]"
+          >
+            وسائل الإعلام والتصوير
+          </h2>
+        </div>
+        <div
+          class="col-span-12 md:col-span-6 lg:col-span-4 flex flex-col items-center relative rounded-lg mb-6"
+        >
+          <img
+            src="2.jpg"
+            alt=""
+            class="md:w-11/12 w-[68%] rounded-lg"
+            width="400"
+            height="250"
+          />
+          <h2
+            class="w-1/2 md:w-3/5 p-2.5 md:p-3 text-lg font-semibold rounded-md border border-slate-200 dark:border-slate-600 dark:text-slate-100 bg-slate-50 dark:bg-slate-700 absolute bottom-0 translate-y-[50%]"
+          >
+            تنظيف السجاد
+          </h2>
+        </div>
+        <div
+          class="col-span-12 md:col-span-6 lg:col-span-4 flex flex-col items-center relative rounded-lg mb-6"
+        >
+          <img
+            src="3.jpg"
+            alt=""
+            class="md:w-11/12 w-[68%] rounded-lg"
+            width="400"
+            height="250"
+          />
+          <h2
+            class="w-1/2 md:w-3/5 p-2.5 md:p-3 text-lg font-semibold rounded-md border border-slate-200 dark:border-slate-600 dark:text-slate-100 bg-slate-50 dark:bg-slate-700 absolute bottom-0 translate-y-[50%]"
+          >
+            إصلاح العجلة
+          </h2>
+        </div>
+        <div class="hidden lg:block lg:col-span-2"></div>
+        <div
+          class="col-span-12 md:col-span-6 lg:col-span-4 flex flex-col items-center relative rounded-lg mb-6"
+        >
+          <img
+            src="7.jpg"
+            alt=""
+            class="md:w-11/12 w-[68%] rounded-lg"
+            width="400"
+            height="250"
+          />
+          <h2
+            class="w-1/2 md:w-3/5 p-2.5 md:p-3 text-lg font-semibold rounded-md border border-slate-200 dark:border-slate-600 dark:text-slate-100 bg-slate-50 dark:bg-slate-700 absolute bottom-0 translate-y-[50%]"
+          >
+            جليسات الأطفال
+          </h2>
+        </div>
+        <div
+          class="col-span-12 md:col-span-6 lg:col-span-4 flex flex-col items-center relative rounded-lg mb-6"
+        >
+          <img
+            src="2.jpg"
+            alt=""
+            class="md:w-11/12 w-[68%] rounded-lg"
+            width="400"
+            height="250"
+          />
+          <h2
+            class="w-1/2 md:w-3/5 p-2.5 md:p-3 text-lg font-semibold rounded-md border border-slate-200 dark:border-slate-600 dark:text-slate-100 bg-slate-50 dark:bg-slate-700 absolute bottom-0 translate-y-[50%]"
+          >
+            نقل أثاث
+          </h2>
+        </div>
+      </div>
+    </div>
+    <!-- Contact Me -->
+    <div>
+      <h2
+        class="container mx-auto text-center text-4xl font-bold text-slate-700 pt-8 mt-8 dark:text-slate-100"
+        id="contact"
+      >
+        اتصل بنا
+      </h2>
+      <div
+        class="container mx-auto w-11/12 sm:w-[70%] grid lg:grid-cols-[1fr_30%] lg:gap-6 sm:grid-rows-1 gap-8 pt-8"
+      >
+        <form action="" class="flex flex-col gap-5" dir="rtl" id="myForm">
+          <label class="block">
+            <span
+              class="block text-sm font-medium text-slate-700 mb-3 dark:text-slate-100"
+              >اسمك الشخـصي</span
+            >
+            <input
+              type="text"
+              required
+              placeholder="أدخل اسمك الشخصي"
+              class="name mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+            />
+          </label>
+          <label class="block">
+            <span
+              class="block text-sm font-medium text-slate-700 mb-3 dark:text-slate-100"
+              >البريد الالكتروني</span
+            >
+            <input
+              type="email"
+              required
+              placeholder="ادخل البريد الالكتروني"
+              class="email mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:text-pink-600 dark:invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+            />
+          </label>
+
+          <label class="block">
+            <span
+              class="block text-sm font-medium text-slate-700 mb-3 dark:text-slate-100"
+              >رسالتك</span
+            >
+            <textarea
+              rows="10"
+              required
+              placeholder="ادخل رسالتك"
+              class="message resize-none mt-1 block w-full px-3 py-2 bg-white dark:bg-slate-700 dark:text-white border border-slate-300 dark:border-slate-600 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+            ></textarea>
+          </label>
+
+          <button
+            id="submit"
+            type="submit"
+            class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          >
+            ارسال
+          </button>
+        </form>
+        <div class="contact-option text-end flex flex-col gap-5">
+          <article
+            class="p-5 text-center bg-gray-100 rounded dark:bg-slate-700 border border-slate-200 dark:border-slate-600"
+          >
+            <i
+              class="fa-solid fa-envelope text-2xl mb-2 dark:text-slate-100"
+            ></i>
+            <h4 class="dark:text-slate-100">البريد الالكتروني</h4>
+            <h5 class="dark:text-slate-100">info@aljode.com</h5>
+            <a
+              href="#"
+              target="_blank"
+              class="mt-3 inline-block text-sm text-blue-500 dark:text-blue-400"
+              >ارسال الرسالة</a
+            >
+          </article>
+          <article
+            class="p-5 text-center bg-gray-100 rounded dark:bg-slate-700 border-slate-200 dark:border-slate-600"
+          >
+            <i
+              class="fa-brands fa-facebook-messenger text-2xl mb-2 dark:text-slate-100"
+            ></i>
+            <h4 class="dark:text-slate-100">مسنجر</h4>
+            <h5 class="dark:text-slate-100">aljode</h5>
+            <a
+              href="#"
+              target="_blank"
+              class="mt-3 inline-block text-sm text-blue-500 dark:text-blue-400"
+              >ارسال الرسالة</a
+            >
+          </article>
+          <article
+            class="p-5 text-center bg-gray-100 rounded dark:bg-slate-700 border-slate-200 dark:border-slate-600"
+          >
+            <i
+              class="fa-brands fa-whatsapp text-2xl mb-2 dark:text-slate-100"
+            ></i>
+            <h4 class="dark:text-slate-100">واتساب</h4>
+            <h5 class="dark:text-slate-100">+123456789</h5>
+            <a
+              href="https://api.whatsapp.com/send?phone=970599560403"
+              target="_blank"
+              class="mt-3 inline-block text-sm text-blue-500 dark:text-blue-400"
+              >ارسال الرسالة</a
+            >
+          </article>
+        </div>
+      </div>
+    </div>
     <!-- Footer -->
     <footer class="text-center pt-12">
       <!-- Section: Links  -->
@@ -470,7 +669,7 @@
                   href=""
                   target="_blank"
                 >
-                  <i class="fa-brands fa-instagram text-[#fd1d1d]"></i>
+                  <i class="fa-brands fa-instagram text-[#e1306c]"></i>
                   <span class="mr-2">تابعنا عبر انستجرام</span>
                 </a>
               </li>
@@ -505,7 +704,7 @@
     ></script>
     <script type="text/javascript">
       (function () {
-        emailjs.init("Rj2QulWvExeOM5G9k");
+        emailjs.init("7j74mPj08TxwyPvZm");
       })();
     </script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -534,12 +733,75 @@
       // Open And Close Buttom
       let btn = document.getElementById("menu-btn");
       let nav = document.getElementById("menu");
+      let anchor = document.querySelectorAll(".anchor");
 
-      btn.addEventListener("click", () => {
+      btn.addEventListener("click", (e) => {
         btn.classList.toggle("open");
         nav.classList.toggle("flex");
         nav.classList.toggle("hidden");
       });
+
+      document.body.addEventListener("click", (e) => {
+        if (e.target.classList.contains("anchor")) {
+          btn.classList.toggle("open");
+          nav.classList.toggle("flex");
+          nav.classList.toggle("hidden");
+        }
+      });
+      // Start Text Landing
+
+      phrases = [
+        "كل ما تحتاجه من خدمات",
+        "كل اللي تبيه وأككككثثثررررر!!",
+        "حمل التطبيق و اطلب ما تريد من الخدمات",
+      ];
+
+      const textDisplay = document.querySelector(".writer");
+
+      let i = 0;
+      let j = 0;
+      let currentPhrase = [];
+      let isDeleting = false;
+      let isEnd = false;
+
+      function loop() {
+        isEnd = false;
+        textDisplay.innerHTML = currentPhrase.join("");
+
+        if (i < phrases.length) {
+          if (!isDeleting && j <= phrases[i].length) {
+            currentPhrase.push(phrases[i][j]);
+            j++;
+            textDisplay.innerHTML = currentPhrase.join("");
+          }
+
+          if (isDeleting && j <= phrases[i].length) {
+            currentPhrase.pop(phrases[i][j]);
+            j--;
+            textDisplay.innerHTML = currentPhrase.join("");
+          }
+
+          if (j == phrases[i].length) {
+            isEnd = true;
+            isDeleting = true;
+          }
+
+          if (isDeleting && j === 0) {
+            currentPhrase = [];
+            isDeleting = false;
+            i++;
+            if (i === phrases.length) {
+              i = 0;
+            }
+          }
+        }
+        const spedUp = 50;
+        const normalSpeed = 200;
+        const time = isEnd ? 2000 : isDeleting ? spedUp : normalSpeed;
+        setTimeout(loop, time);
+      }
+      loop();
+      // End Text Landing
 
       // Customization
       tailwind.config = {
@@ -588,7 +850,7 @@
       }
       validData();
       function sendmail(name, email, message) {
-        emailjs.send("service_16k3ovi", "template_y84xesf", {
+        emailjs.send("service_c0z6ydo", "template_f40wc47", {
           name: name,
           email: email,
           message: message,
@@ -597,20 +859,20 @@
       function success() {
         let timerInterval;
         Swal.fire({
-          title: "! Good job",
+          title: "Good job !",
           text: "Successfully Sent Message",
           icon: "success",
-          timer: 1500,
+          timer: 2000,
           timerProgressBar: true,
         });
       }
       function inputEmpty() {
         let timerInterval;
         Swal.fire({
-          title: "! Oops...",
-          text: "! Inputs fileds are required",
+          title: "Oops... !",
+          text: "Inputs fileds are required !",
           icon: "error",
-          timer: 2000,
+          timer: 3500,
           timerProgressBar: true,
         });
       }
