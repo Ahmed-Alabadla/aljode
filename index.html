@@ -65,6 +65,10 @@
       .product:hover span {
         box-shadow: 0 0 0 400px #3b82f6;
       }
+
+      .product:hover .number {
+        background-color: #2563eb;
+      }
     </style>
   </head>
   <body class="font-['Cairo'] bg-white dark:bg-slate-800">
@@ -74,7 +78,7 @@
       <div class="flex items-center justify-between">
         <!-- logo -->
         <div class="font-bold text-2xl text-blue-600 dark:text-blue-500">
-          <a href=""> الجـودي <i class="fa-solid fa-infinity"></i> </a>
+          <a href="#home"> الجـودي <i class="fa-solid fa-infinity"></i> </a>
         </div>
         <!-- Menu Item -->
         <div class="hidden md:flex md:space-x-4 lg:space-x-6" dir="rtl">
@@ -281,166 +285,6 @@
       </div>
     </div>
 
-    <!-- How it Works  -->
-    <section class="relative mb-6" id="howItWorks">
-      <h2
-        class="container mx-auto text-center text-4xl font-bold text-slate-700 pt-8 mt-8 dark:text-slate-100"
-        id="services"
-      >
-        كيف يعمل
-      </h2>
-      <div
-        class="container mx-auto relative mt-10 before:content-[''] before:absolute before:top-0 lg:before:right-1/2 md:before:right-[15%] before:bg-slate-500 dark:before:bg-slate-400 before:z-[-1] md:before:z-1 before:w-0.5 before:h-full max-w-5xl flex flex-col items-center"
-      >
-        <div
-          class="product max-w-sm p-5 text-center rounded-xl shadow-md overflow-hidden m-6 lg:mr-4 lg:ml-auto bg-slate-50 dark:bg-slate-700 flex gap-3 md:gap-0 flex-col md:flex-row items-center justify-between clear-both z-4 md:z-0"
-        >
-          <div
-            class="w-12 h-12 rounded-full font-bold text-xl transition-all duration-700 bg-blue-500 flex items-center justify-center dark:text-white z-1 md:absolute md:right-[15%] md:translate-x-1/2 lg:right-1/2 lg:translate-x-1/2"
-          >
-            01
-          </div>
-          <div>
-            <span
-              class="w-0 h-0 rounded-full transition-all duration-700"
-            ></span>
-            <h3 class="text-xl my-3.5 font-bold dark:text-slate-50">
-              انشئ حسابك على تطبيق خدماتك
-            </h3>
-
-            <p class="text-lg text-slate-600 dark:text-slate-300 leading-8">
-              بعد انشاء الحساب اذهب الي ملفك الشخصي وقم بتعديله ورفع صورة شخصية
-            </p>
-          </div>
-        </div>
-        <div
-          class="product max-w-sm p-5 text-center rounded-xl shadow-md overflow-hidden m-6 lg:ml-4 lg:mr-auto bg-slate-50 dark:bg-slate-700 flex gap-3 md:gap-0 flex-col md:flex-row items-center justify-between clear-both z-4 md:z-0"
-        >
-          <div
-            class="w-12 h-12 rounded-full font-bold text-xl transition-all duration-700 bg-blue-500 flex items-center justify-center dark:text-white z-1 md:absolute md:right-[15%] md:translate-x-1/2 lg:right-1/2 lg:translate-x-1/2"
-          >
-            02
-          </div>
-          <div>
-            <span
-              class="w-0 h-0 rounded-full transition-all duration-700"
-            ></span>
-            <h3 class="text-xl my-3.5 font-bold dark:text-slate-50">
-              اكتب طلبك بالقسم المناسب
-            </h3>
-            <p class="text-lg text-slate-600 dark:text-slate-300 leading-8">
-              بعد اختيار القسم المناسب ابدء بملئ نموذج الطلب وادخال كتابه
-              التفاصيل المطلوبة
-            </p>
-          </div>
-        </div>
-        <div
-          class="product max-w-sm p-5 text-center rounded-xl shadow-md overflow-hidden m-6 lg:mr-4 lg:ml-auto bg-slate-50 dark:bg-slate-700 flex gap-3 md:gap-0 flex-col md:flex-row items-center justify-between clear-both z-4 md:z-0"
-        >
-          <div
-            class="w-12 h-12 rounded-full font-bold text-xl transition-all duration-700 bg-blue-500 flex items-center justify-center dark:text-white z-1 md:absolute md:right-[15%] md:translate-x-1/2 lg:right-1/2 lg:translate-x-1/2"
-          >
-            03
-          </div>
-          <div>
-            <span
-              class="w-0 h-0 rounded-full transition-all duration-700"
-            ></span>
-            <h3 class="text-xl my-3.5 font-bold dark:text-slate-50">
-              السعر المناسب
-            </h3>
-
-            <p class="text-lg text-slate-600 dark:text-slate-300 leading-8">
-              بعد تقديم الطلب ستبدأ باستقبال عروض الاسعار من مقدمي الخدمة ويمكنك
-              قبول السعر المناسب بالضغط على قبول العرض
-            </p>
-          </div>
-        </div>
-        <div
-          class="product max-w-sm p-5 text-center rounded-xl shadow-md overflow-hidden m-6 lg:ml-4 lg:mr-auto bg-slate-50 dark:bg-slate-700 flex gap-3 md:gap-0 flex-col md:flex-row items-center justify-between clear-both z-4 md:z-0"
-        >
-          <div
-            class="w-12 h-12 rounded-full font-bold text-xl transition-all duration-700 bg-blue-500 flex items-center justify-center dark:text-white z-1 md:absolute md:right-[15%] md:translate-x-1/2 lg:right-1/2 lg:translate-x-1/2"
-          >
-            04
-          </div>
-          <div>
-            <span
-              class="w-0 h-0 rounded-full transition-all duration-700"
-            ></span>
-            <h3 class="text-xl my-3.5 font-bold dark:text-slate-50">
-              بدء المهمة
-            </h3>
-            <p class="text-lg text-slate-600 dark:text-slate-300 leading-8">
-              فور بدء مقدم الخدمة المهمة يظهر رقم الجوال فورا وتستطيع التواصل
-              معه بسهولة
-            </p>
-          </div>
-        </div>
-        <div
-          class="product max-w-sm p-5 text-center rounded-xl shadow-md overflow-hidden m-6 lg:mr-4 lg:ml-auto bg-slate-50 dark:bg-slate-700 flex gap-3 md:gap-0 flex-col md:flex-row items-center justify-between clear-both z-4 md:z-0"
-        >
-          <div
-            class="w-12 h-12 rounded-full font-bold text-xl transition-all duration-700 bg-blue-500 flex items-center justify-center dark:text-white z-1 md:absolute md:right-[15%] md:translate-x-1/2 lg:right-1/2 lg:translate-x-1/2"
-          >
-            05
-          </div>
-          <div>
-            <span
-              class="w-0 h-0 rounded-full transition-all duration-700"
-            ></span>
-            <h3 class="text-xl my-3.5 font-bold dark:text-slate-50">
-              تقيم مقدم الخدمة
-            </h3>
-
-            <p class="text-lg text-slate-600 dark:text-slate-300 leading-8">
-              تهانينا على تنفيذ الخدمة بنجاح يمكنك الان تقييم مقدم الخدمة من 1
-              الي 5 نجوم علما ان 1 نجمة تعني لست راضي و 5 نجوم تعني راض جدا
-            </p>
-          </div>
-        </div>
-      </div>
-      >
-    </section>
-
-    <!-- Download App -->
-    <div
-      class="py-10 bg-[url('bg-light.jpg')] dark:bg-[url('bg-dark.jpg')] mt-12 flex flex-col lg:flex-row gap-8"
-      id="downloadApp"
-    >
-      <div
-        class="container mx-auto text-center flex flex-col items-center gap-5"
-      >
-        <h2 class="text-4xl font-bold mt-3.5 dark:text-white">تحميل التطبيق</h2>
-        <p class="text-2xl font-medium m-2 dark:text-slate-100">
-          حمل التطبيق الان ولا تشيل هم اى شئ نوفر لك كل ما تحتاجه
-        </p>
-        <div class="flex gap-3 justify-center mx-3.5">
-          <a href="#" class="">
-            <img src="App Store.png" alt="" width="170" />
-          </a>
-          <a href="#" class="">
-            <img src="Google play.png" alt="" width="170" />
-          </a>
-        </div>
-      </div>
-      <div
-        class="container mx-auto text-center flex flex-col items-center gap-5"
-      >
-        <h2 class="text-4xl font-bold mt-3.5 dark:text-white">تحميل التطبيق</h2>
-        <p class="text-2xl font-medium m-2 dark:text-slate-100">
-          حمل التطبيق الان ولا تشيل هم اى شئ نوفر لك كل ما تحتاجه
-        </p>
-        <div class="flex gap-3 justify-center mx-3.5">
-          <a href="#" class="">
-            <img src="App Store.png" alt="" width="170" />
-          </a>
-          <a href="#" class="">
-            <img src="Google play.png" alt="" width="170" />
-          </a>
-        </div>
-      </div>
-    </div>
     <!-- Services -->
     <div>
       <h2
@@ -584,6 +428,175 @@
         </div>
       </div>
     </div>
+
+    <!-- How it Works  -->
+    <section class="relative mb-6" id="howItWorks">
+      <h2
+        class="container mx-auto text-center text-4xl font-bold text-slate-700 pt-8 mt-8 dark:text-slate-100"
+      >
+        كيف يعمل
+      </h2>
+      <div
+        class="container mx-auto relative mt-10 before:content-[''] before:absolute before:top-0 lg:before:right-1/2 md:before:right-[15%] before:bg-slate-500 dark:before:bg-slate-400 before:z-[-1] md:before:z-1 before:w-0.5 before:h-[95%] md:before:h-full max-w-5xl flex flex-col items-center"
+      >
+        <div
+          class="product max-w-sm p-5 text-center rounded-xl shadow-md overflow-hidden m-6 lg:mr-4 lg:ml-auto bg-slate-50 dark:bg-slate-700 flex gap-3 md:gap-0 flex-col md:flex-row items-center justify-between clear-both z-4 md:z-0"
+        >
+          <div
+            class="number w-12 h-12 rounded-full font-bold text-xl transition-all duration-700 bg-blue-500 flex items-center justify-center dark:text-white z-10 md:absolute md:right-[15%] md:translate-x-1/2 lg:right-1/2 lg:translate-x-1/2"
+          >
+            01
+          </div>
+          <div>
+            <span
+              class="w-0 h-0 rounded-full transition-all duration-700"
+            ></span>
+            <h3 class="text-xl my-3.5 font-bold dark:text-slate-50">
+              انشئ حسابك على تطبيق خدماتك
+            </h3>
+
+            <p class="text-lg text-slate-600 dark:text-slate-300 leading-8">
+              بعد انشاء الحساب اذهب الي ملفك الشخصي وقم بتعديله ورفع صورة شخصية
+            </p>
+          </div>
+        </div>
+        <div
+          class="product max-w-sm p-5 text-center rounded-xl shadow-md overflow-hidden m-6 lg:ml-4 lg:mr-auto bg-slate-50 dark:bg-slate-700 flex gap-3 md:gap-0 flex-col md:flex-row items-center justify-between clear-both z-4 md:z-0"
+        >
+          <div
+            class="number w-12 h-12 rounded-full font-bold text-xl transition-all duration-700 bg-blue-500 flex items-center justify-center dark:text-white z-10 md:absolute md:right-[15%] md:translate-x-1/2 lg:right-1/2 lg:translate-x-1/2"
+          >
+            02
+          </div>
+          <div>
+            <span
+              class="w-0 h-0 rounded-full transition-all duration-700"
+            ></span>
+            <h3 class="text-xl my-3.5 font-bold dark:text-slate-50">
+              اكتب طلبك بالقسم المناسب
+            </h3>
+            <p class="text-lg text-slate-600 dark:text-slate-300 leading-8">
+              بعد اختيار القسم المناسب ابدء بملئ نموذج الطلب وادخال كتابه
+              التفاصيل المطلوبة
+            </p>
+          </div>
+        </div>
+        <div
+          class="product max-w-sm p-5 text-center rounded-xl shadow-md overflow-hidden m-6 lg:mr-4 lg:ml-auto bg-slate-50 dark:bg-slate-700 flex gap-3 md:gap-0 flex-col md:flex-row items-center justify-between clear-both z-4 md:z-0"
+        >
+          <div
+            class="number w-12 h-12 rounded-full font-bold text-xl transition-all duration-700 bg-blue-500 flex items-center justify-center dark:text-white z-10 md:absolute md:right-[15%] md:translate-x-1/2 lg:right-1/2 lg:translate-x-1/2"
+          >
+            03
+          </div>
+          <div>
+            <span
+              class="w-0 h-0 rounded-full transition-all duration-700"
+            ></span>
+            <h3 class="text-xl my-3.5 font-bold dark:text-slate-50">
+              السعر المناسب
+            </h3>
+
+            <p class="text-lg text-slate-600 dark:text-slate-300 leading-8">
+              بعد تقديم الطلب ستبدأ باستقبال عروض الاسعار من مقدمي الخدمة ويمكنك
+              قبول السعر المناسب بالضغط على قبول العرض
+            </p>
+          </div>
+        </div>
+        <div
+          class="product max-w-sm p-5 text-center rounded-xl shadow-md overflow-hidden m-6 lg:ml-4 lg:mr-auto bg-slate-50 dark:bg-slate-700 flex gap-3 md:gap-0 flex-col md:flex-row items-center justify-between clear-both z-4 md:z-0"
+        >
+          <div
+            class="number w-12 h-12 rounded-full font-bold text-xl transition-all duration-700 bg-blue-500 flex items-center justify-center dark:text-white z-10 md:absolute md:right-[15%] md:translate-x-1/2 lg:right-1/2 lg:translate-x-1/2"
+          >
+            04
+          </div>
+          <div>
+            <span
+              class="w-0 h-0 rounded-full transition-all duration-700"
+            ></span>
+            <h3 class="text-xl my-3.5 font-bold dark:text-slate-50">
+              بدء المهمة
+            </h3>
+            <p class="text-lg text-slate-600 dark:text-slate-300 leading-8">
+              فور بدء مقدم الخدمة المهمة يظهر رقم الجوال فورا وتستطيع التواصل
+              معه بسهولة
+            </p>
+          </div>
+        </div>
+        <div
+          class="product max-w-sm p-5 text-center rounded-xl shadow-md overflow-hidden m-6 lg:mr-4 lg:ml-auto bg-slate-50 dark:bg-slate-700 flex gap-3 md:gap-0 flex-col md:flex-row items-center justify-between clear-both z-4 md:z-0"
+        >
+          <div
+            class="number w-12 h-12 rounded-full font-bold text-xl transition-all duration-700 bg-blue-500 flex items-center justify-center dark:text-white z-10 md:absolute md:right-[15%] md:translate-x-1/2 lg:right-1/2 lg:translate-x-1/2"
+          >
+            05
+          </div>
+          <div>
+            <span
+              class="w-0 h-0 rounded-full transition-all duration-700"
+            ></span>
+            <h3 class="text-xl my-3.5 font-bold dark:text-slate-50">
+              تقيم مقدم الخدمة
+            </h3>
+
+            <p class="text-lg text-slate-600 dark:text-slate-300 leading-8">
+              تهانينا على تنفيذ الخدمة بنجاح يمكنك الان تقييم مقدم الخدمة من 1
+              الي 5 نجوم علما ان 1 نجمة تعني لست راضي و 5 نجوم تعني راض جدا
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download App -->
+    <div
+      class="py-10 bg-[url('bg-light.jpg')] dark:bg-[url('bg-dark.jpg')] mt-12"
+      id="downloadApp"
+    >
+      <h2
+        class="container mx-auto text-center text-4xl font-bold text-slate-700 dark:text-slate-100"
+      >
+        تحميل التطبيق
+      </h2>
+      <div class="flex flex-col lg:flex-row gap-8 pt-8 mt-8">
+        <div
+          class="container mx-auto text-center flex flex-col items-center gap-5"
+        >
+          <h2 class="text-4xl font-bold mt-3.5 dark:text-white">
+            مندوب التوصيل
+          </h2>
+          <p class="text-2xl font-medium m-2 dark:text-slate-100">
+            حمل التطبيق الان ولا تشيل هم اى شئ نوفر لك كل ما تحتاجه
+          </p>
+          <div class="flex gap-3 justify-center mx-3.5">
+            <a href="#" class="">
+              <img src="App Store.png" alt="" width="170" />
+            </a>
+            <a href="#" class="">
+              <img src="Google play.png" alt="" width="170" />
+            </a>
+          </div>
+        </div>
+        <div
+          class="container mx-auto text-center flex flex-col items-center gap-5"
+        >
+          <h2 class="text-4xl font-bold mt-3.5 dark:text-white">تاجر/بائع</h2>
+          <p class="text-2xl font-medium m-2 dark:text-slate-100">
+            حمل التطبيق الان ولا تشيل هم اى شئ نوفر لك كل ما تحتاجه
+          </p>
+          <div class="flex gap-3 justify-center mx-3.5">
+            <a href="#" class="">
+              <img src="App Store.png" alt="" width="170" />
+            </a>
+            <a href="#" class="">
+              <img src="Google play.png" alt="" width="170" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Contact Me -->
     <div>
       <h2
@@ -702,7 +715,7 @@
             class="col-span-4 md:col-span-2 lg:col-span-1 mx-auto mb-4 lg:text-start"
           >
             <!-- Content -->
-            <div class="mb-3">
+            <div class="mb-3 lg:mr-5">
               <h2
                 class="font-bold text-4xl text-blue-500 dark:text-blue-400 mb-10"
               >
