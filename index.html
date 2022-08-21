@@ -271,10 +271,10 @@
           جميع خدماتك التي تحتاجها توصلك لحد باب البيت بكل سرعة و أمان
         </h1>
         <div class="flex gap-3 justify-center md:justify-start">
-          <a href="#">
+          <a href="#!" data-modal-toggle="comming-soon">
             <img src="App Store.png" alt="" width="170" />
           </a>
-          <a href="#">
+          <a href="#!" data-modal-toggle="comming-soon">
             <img src="Google play.png" alt="" width="170" />
           </a>
         </div>
@@ -550,30 +550,30 @@
     </section>
 
     <!-- Download App -->
-    <div
-      class="py-10 bg-[url('bg-light.jpg')] dark:bg-[url('bg-dark.jpg')] mt-12"
+    <h2
+      class="container mx-auto text-center text-4xl font-bold text-slate-700 dark:text-slate-100 mt-8 pt-6"
       id="downloadApp"
     >
-      <h2
-        class="container mx-auto text-center text-4xl font-bold text-slate-700 dark:text-slate-100"
-      >
-        تحميل التطبيق
-      </h2>
-      <div class="flex flex-col lg:flex-row gap-8 pt-8 mt-8">
+      تحميل التطبيق
+    </h2>
+    <div
+      class="py-10 bg-[url('bg-light.jpg')] dark:bg-[url('bg-dark.jpg')] mt-12"
+    >
+      <div class="flex flex-col lg:flex-row gap-8">
         <div
           class="container mx-auto text-center flex flex-col items-center gap-5"
         >
-          <h2 class="text-4xl font-bold mt-3.5 dark:text-white">
-            مندوب التوصيل
+          <h2 class="text-2xl font-bold mt-3.5 dark:text-white">
+            تطبيق العميل
           </h2>
-          <p class="text-2xl font-medium m-2 dark:text-slate-100">
+          <p class="text-xl font-medium m-2 dark:text-slate-100">
             حمل التطبيق الان ولا تشيل هم اى شئ نوفر لك كل ما تحتاجه
           </p>
           <div class="flex gap-3 justify-center mx-3.5">
-            <a href="#" class="">
+            <a href="#!" class="" data-modal-toggle="comming-soon">
               <img src="App Store.png" alt="" width="170" />
             </a>
-            <a href="#" class="">
+            <a href="#!" class="" data-modal-toggle="comming-soon">
               <img src="Google play.png" alt="" width="170" />
             </a>
           </div>
@@ -581,15 +581,17 @@
         <div
           class="container mx-auto text-center flex flex-col items-center gap-5"
         >
-          <h2 class="text-4xl font-bold mt-3.5 dark:text-white">تاجر/بائع</h2>
-          <p class="text-2xl font-medium m-2 dark:text-slate-100">
+          <h2 class="text-2xl font-bold mt-3.5 dark:text-white">
+            تطبيق مقدم الخدمة
+          </h2>
+          <p class="text-xl font-medium m-2 dark:text-slate-100">
             حمل التطبيق الان ولا تشيل هم اى شئ نوفر لك كل ما تحتاجه
           </p>
           <div class="flex gap-3 justify-center mx-3.5">
-            <a href="#" class="">
+            <a href="#!" class="" data-modal-toggle="comming-soon">
               <img src="App Store.png" alt="" width="170" />
             </a>
-            <a href="#" class="">
+            <a href="#!" class="" data-modal-toggle="comming-soon">
               <img src="Google play.png" alt="" width="170" />
             </a>
           </div>
@@ -704,6 +706,7 @@
         </div>
       </div>
     </div>
+
     <!-- Footer -->
     <footer class="text-center pt-12">
       <!-- Section: Links  -->
@@ -879,6 +882,67 @@
       <!-- Copyright -->
     </footer>
 
+    <!-- Main modal -->
+
+    <div
+      class="relative z-10 hidden"
+      aria-labelledby="modal-title"
+      role="dialog"
+      aria-modal="true"
+      id="comming-soon"
+    >
+      <div class="fixed z-10 inset-0 overflow-y-auto">
+        <div
+          class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+          id="back"
+        ></div>
+        <div
+          class="flex items-center justify-center min-h-full p-4 text-center sm:p-0"
+        >
+          <div
+            class="relative bg-white dark:bg-slate-700 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full"
+          >
+            <div class="flex justify-between p-4">
+              <p class="text-xl dark:text-slate-100">قريبا...</p>
+              <button id="closeBtn1">
+                <i class="fa-solid fa-xmark dark:text-slate-100"></i>
+              </button>
+            </div>
+            <hr class="dark:border-slate-500" />
+            <div
+              class="bg-white dark:bg-slate-700 px-4 pt-5 pb-4 sm:p-6 sm:pb-4"
+            >
+              <div class="sm:flex sm:items-start">
+                <div class="mt-3 text-center sm:mt-0">
+                  <h3
+                    class="text-3xl leading-10 font-medium mb-5 text-blue-500 dark:text-blue-400"
+                    id="modal-title"
+                  >
+                    التطبيق سيتوفر قريبا
+                  </h3>
+                  <div class="mt-2">
+                    <img src="comingSoon.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="dark:border-slate-500" />
+            <div
+              class="bg-gray-50 dark:bg-slate-700 px-4 py-3 sm:flex sm:flex-row-reverse"
+            >
+              <button
+                id="closeBtn2"
+                type="button"
+                class="w-full text-center inline-flex justify-center rounded-md border border-transparent shadow-sm p-2 bg-blue-500 text-base font-medium text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-transparent sm:w-auto sm:text-sm"
+              >
+                إغلاق
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
@@ -891,6 +955,34 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
+      // set the modal menu element
+      window.addEventListener("DOMContentLoaded", () => {
+        const targetEl = document.getElementById("comming-soon");
+        const button = document.querySelectorAll(
+          `[data-modal-toggle="comming-soon"]`
+        );
+        const close1 = document.getElementById("closeBtn1");
+        const close2 = document.getElementById("closeBtn2");
+        const back = document.getElementById("back");
+
+        button.forEach((a) => {
+          a.addEventListener("click", () => {
+            targetEl.classList.remove("hidden");
+            console.log("modal is shown");
+          });
+        });
+
+        close1.addEventListener("click", () => {
+          targetEl.classList.add("hidden");
+        });
+        close2.addEventListener("click", () => {
+          targetEl.classList.add("hidden");
+        });
+        back.addEventListener("click", () => {
+          targetEl.classList.add("hidden");
+        });
+      });
+
       // Local Stroge
       let option = window.localStorage.getItem("mode");
       if (option !== null) {
@@ -929,6 +1021,7 @@
           nav.classList.toggle("hidden");
         }
       });
+
       // Start Text Landing
 
       phrases = [
